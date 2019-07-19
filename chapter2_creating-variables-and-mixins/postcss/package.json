@@ -1,0 +1,17 @@
+{
+  "name": "postcss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel serve index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "postcss-each": "^0.10.0",
+    "postcss-for": "^2.1.1",
+    "postcss-mixins": "^6.2.2",
+    "postcss-preset-env": "^6.7.0"
+  }
+}

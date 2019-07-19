@@ -1,0 +1,48 @@
+:root {
+  --dark-grayish-green: #868a7b;
+  --very-dark-gray: #333333;
+  --white: #fff;
+
+  --fullsize: 100%;
+}
+
+@define-mixin fontstyle $size, $color {
+  font-size: $(size)px;
+  font-size: calc($size/16)rem;
+  color: $color;
+}
+
+html, body {
+  width: var(--fullsize);
+  padding: 0;
+  margin: 0;
+  height: var(--fullsize);
+  min-width: var(--fullsize);
+  max-width: var(--fullsize);
+  overflow: hidden;
+  background-color: var(--dark-grayish-green);
+}
+
+h3 {
+  @mixin fontstyle 32, #fff;
+}
+
+@for $x from 1 to 3 {
+  .grid-$x {
+    width: $(x)px;
+  }
+}
+
+.social-icon {
+  background: 50% no-repeat;
+  background-size: 100%;
+  float: left;
+  height: 50px;
+  width: 50px;
+
+  @each $media in twitter, linkedin, youtube {
+    & .$(media) {
+      font-family: $(media);
+    }
+  }
+}
